@@ -21,14 +21,21 @@ const description =
   "John Mark Pacis is a software engineer from Pangasinan, Philippines with 3+ years of experience shipping production systems end-to-end, from role-based access control and multi-repository safety infrastructure to real-time scheduling platforms and B2B SaaS features.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jm-portfolio-eta.vercel.app"),
   title: "John Mark Pacis — Software Engineer",
   description,
   openGraph: {
     title: "John Mark Pacis — Software Engineer",
     description,
+    url: "https://jm-portfolio-eta.vercel.app",
     type: "website",
     siteName: "John Mark Pacis",
     locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "John Mark Pacis — Software Engineer",
+    description,
   },
 };
 
