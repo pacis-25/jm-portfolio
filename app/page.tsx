@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import { CONFIG, STACK_MARQUEE, EXPERIENCE, HIGHLIGHTS, SKILLS } from "./data";
+import ThemeToggle from "./theme-toggle";
+import { useTheme } from "./theme";
 
 function useReveal(): [React.RefObject<HTMLDivElement | null>, boolean] {
   const ref = useRef<HTMLDivElement>(null);
@@ -39,6 +41,7 @@ function Reveal({ children, delay = 0, className = "" }: RevealProps) {
 }
 
 export default function Portfolio() {
+  const theme = useTheme();
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const t = setTimeout(() => setLoaded(true), 80);
@@ -60,6 +63,7 @@ export default function Portfolio() {
               <a href="#experience">Experience</a>
               <a href="#skills">Skills</a>
               <a href="#contact">Contact</a>
+              <ThemeToggle />
             </div>
           </div>
         </nav>
@@ -92,11 +96,13 @@ export default function Portfolio() {
         {/* Tech marquee */}
         <div className="marquee" aria-label="Technology stack">
           <div className="marquee-track">
-            {[...STACK_MARQUEE, ...STACK_MARQUEE].map((s, i) => (
+            {[...STACK_MARQUEE, ...STACK_MARQUEE].map((s, i) => {
+              const color = theme === "light" ? s.colorLight : s.colorDark;
+              return (
               <span className="marquee-item" key={s.slug + i}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`https://cdn.simpleicons.org/${s.slug}${s.color ? `/${s.color}` : ""}`}
+                  src={`https://cdn.simpleicons.org/${s.slug}${color ? `/${color}` : ""}`}
                   width={20}
                   height={20}
                   loading="lazy"
@@ -105,7 +111,8 @@ export default function Portfolio() {
                 />
                 {s.label}
               </span>
-            ))}
+              );
+            })}
           </div>
         </div>
 

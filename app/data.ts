@@ -32,27 +32,28 @@ export const CONFIG = {
 export interface StackItem {
   label: string;
   slug: string;
-  color?: string;
+  colorDark?: string;
+  colorLight?: string;
 }
 
 export const STACK_MARQUEE: StackItem[] = [
-  { label: "React", slug: "react", color: "61DAFB" },
-  { label: "Next.js", slug: "nextdotjs", color: "E9EEF3" },
-  { label: "TypeScript", slug: "typescript", color: "3178C6" },
-  { label: "Vite", slug: "vite", color: "646CFF" },
-  { label: "Node.js", slug: "nodedotjs", color: "5FA04E" },
-  { label: "Fastify", slug: "fastify", color: "E9EEF3" },
-  { label: "Spring Boot", slug: "springboot", color: "6DB33F" },
-  { label: "Laravel", slug: "laravel", color: "FF2D20" },
-  { label: "PostgreSQL", slug: "postgresql", color: "4169E1" },
-  { label: "MySQL", slug: "mysql", color: "4479A1" },
-  { label: "GraphQL", slug: "graphql", color: "E10098" },
-  { label: "Cypress", slug: "cypress", color: "69D3A7" },
-  { label: "Redux", slug: "redux", color: "764ABC" },
-  { label: "Material UI", slug: "mui", color: "007FFF" },
-  { label: "Mantine", slug: "mantine", color: "339AF0" },
-  { label: "Docker", slug: "docker", color: "2496ED" },
-  { label: "Claude", slug: "claude", color: "D97757" },
+  { label: "React", slug: "react", colorDark: "61DAFB", colorLight: "61DAFB" },
+  { label: "Next.js", slug: "nextdotjs", colorDark: "E9EEF3", colorLight: "0D141C" },
+  { label: "TypeScript", slug: "typescript", colorDark: "3178C6", colorLight: "3178C6" },
+  { label: "Vite", slug: "vite", colorDark: "646CFF", colorLight: "646CFF" },
+  { label: "Node.js", slug: "nodedotjs", colorDark: "5FA04E", colorLight: "5FA04E" },
+  { label: "Fastify", slug: "fastify", colorDark: "E9EEF3", colorLight: "0D141C" },
+  { label: "Spring Boot", slug: "springboot", colorDark: "6DB33F", colorLight: "6DB33F" },
+  { label: "Laravel", slug: "laravel", colorDark: "FF2D20", colorLight: "FF2D20" },
+  { label: "PostgreSQL", slug: "postgresql", colorDark: "4169E1", colorLight: "4169E1" },
+  { label: "MySQL", slug: "mysql", colorDark: "4479A1", colorLight: "4479A1" },
+  { label: "GraphQL", slug: "graphql", colorDark: "E10098", colorLight: "E10098" },
+  { label: "Cypress", slug: "cypress", colorDark: "69D3A7", colorLight: "69D3A7" },
+  { label: "Redux", slug: "redux", colorDark: "764ABC", colorLight: "764ABC" },
+  { label: "Material UI", slug: "mui", colorDark: "007FFF", colorLight: "007FFF" },
+  { label: "Mantine", slug: "mantine", colorDark: "339AF0", colorLight: "339AF0" },
+  { label: "Docker", slug: "docker", colorDark: "2496ED", colorLight: "2496ED" },
+  { label: "Claude", slug: "claude", colorDark: "D97757", colorLight: "D97757" },
 ];
 
 export const EXPERIENCE: Experience[] = [
